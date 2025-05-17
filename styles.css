@@ -46,7 +46,7 @@ body {
     display: flex;
     align-items: stretch;
     height: 100%;
-    padding: 0 1rem;
+    padding: 0 0rem;
 }
 
 .vertical-divider {
