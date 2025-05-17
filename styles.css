@@ -12,14 +12,14 @@ body {
 }
 
 .branding .logo {
-    height: 60px;
+    height: 100px;
 }
 
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 0rem;
     gap: 0rem;
     flex-wrap: wrap;
 }
