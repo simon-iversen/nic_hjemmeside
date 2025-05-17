@@ -84,7 +84,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .image-box img {
