@@ -30,7 +30,7 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -64,6 +64,8 @@ body {
 
 .services {
     flex: 0 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .services ul {
