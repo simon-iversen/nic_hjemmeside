@@ -83,6 +83,43 @@ body {
     font-weight: 600;
 }
 
+/* Initially hide the group meant for small screens */
+.services-below-group {
+    display: none;
+    flex-direction: column;
+    /* It will stack its children */
+    align-items: center;
+    /* Center its children (divider and services list) */
+    width: 100%;
+    /* Take full width when it appears */
+}
+
+.horizontal-divider-container {
+    width: 80%;
+    /* Or a specific max-width */
+    margin: 1rem 0;
+    /* Add some space around the divider */
+    display: flex;
+    /* To center the divider line itself if it has a fixed width */
+    justify-content: center;
+}
+
+.horizontal-divider {
+    height: 1px;
+    width: 100%;
+    /* Makes the line take the width of its container */
+    background-color: #333;
+}
+
+/* Ensure the right-side group is shown by default (though it is by flex properties) */
+.services-right-group {
+    display: flex;
+    /* This is the default state from .intro's children */
+    align-items: center;
+    gap: 2rem;
+    /* Maintain the gap from the original .intro styling */
+}
+
 .contact-button {
     background-color: #c7a86f;
     border: none;
@@ -176,4 +213,57 @@ footer {
     top: 1rem;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        /* Stack main-content and the services groups */
+        gap: 1rem;
+        /* Adjust gap for vertical stacking */
+    }
+
+    .services-right-group {
+        display: none;
+        /* Hide the vertical divider and right-side services */
+    }
+
+    .services-below-group {
+        display: flex;
+        /* Show this group */
+    }
+
+    .intro .headline {
+        font-size: 2rem;
+        /* Slightly smaller headline on mobile */
+    }
+
+    .main-content {
+        align-items: center;
+        /* Center headline and button */
+    }
+
+    .services ul {
+        text-align: center;
+        /* Center the list items if they wrap */
+    }
+}
+
+/* Media Query for VERY narrow screens (e.g., small mobile) */
+@media (max-width: 600px) {
+    .image-box {
+        display: none;
+        /* Hide the image box entirely */
+    }
+
+    .intro .headline {
+        font-size: 1.8rem;
+        /* Further adjust headline for very small screens */
+    }
+
+    .container {
+        padding: 1rem;
+        /* Reduce padding on very small screens */
+    }
 }
